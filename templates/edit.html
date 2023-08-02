@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>edit</title>
+</head>
+<body>
+    <h1 align="center"  >Edit Message</h1>
+    <form method="post">
+        {% csrf_token %}
+        <table border="1"  align="center">
+            <tr>
+                <td>Enter Name: </td>
+                <td><input type="text" name="uname" value={{data.name}}></td>
+            </tr>
+            <tr>
+                <td>Email Id: </td>
+                <td><input type="email" name="uemail" value={{data.email}}></td>
+            </tr>
+            <tr>
+                <td>Mobile No: </td>
+                <td><input type="number" name="mobile" value={{data.mobile}}></td>
+            </tr>
+            <tr>
+                <td>Message: </td>
+                <td><textarea name="msg" id="" cols="30" rows="10">{{data.msg}}</textarea></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Edit"></td>
+            </tr>
+
+        </table>
+    </form>
+    
+</body>
+</html>
